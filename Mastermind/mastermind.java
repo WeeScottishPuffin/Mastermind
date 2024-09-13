@@ -64,10 +64,10 @@ public class mastermind {
             won = true;
             for (int i = 0; i < CODE_LENGTH; i++) {
                 if (guess[i].equals(solution[i])) {
-                    results[guessn][i] = "\u001B[32mo\u001B[0m";
+                    results[guessn][i] = colours.colourMap().get("g");
                 } else if (Arrays.asList(solution).contains(guess[i])) {
                     won = false;
-                    results[guessn][i] = "\u001B[33mo\u001B[0m";
+                    results[guessn][i] = colours.colourMap().get("y");
                 } else {
                     results[guessn][i] = "o";
                     won = false;
