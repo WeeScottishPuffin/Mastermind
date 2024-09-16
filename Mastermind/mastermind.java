@@ -41,10 +41,10 @@ public class mastermind {
         //Mainloop
         for (int guessn = 0; guessn < TURNS; guessn++) {
             //Print old guesses
-            guess_log = guessVisual.visualiseGuesses(CODE_LENGTH, guesses, results, guessn);
             //Guess
             for (int j = 0; j < CODE_LENGTH; j++) {
                 String guess_ = "";
+                guess_log = guessVisual.visualiseGuesses(CODE_LENGTH, guesses, results, guessn);
                 while (!Arrays.asList(colours_short).contains(guess_) && !"e".equals(guess_)) {
                     clear();
                     System.out.println(guess_log);
