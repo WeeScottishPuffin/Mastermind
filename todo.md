@@ -1,5 +1,0 @@
-# TODO
-
-- Guesses, Results -> ArrayList
-
-
