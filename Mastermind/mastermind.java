@@ -80,14 +80,18 @@ public class mastermind {
             System.out.println();
         }
         //Check if you won or lost
+        clear();
+        guess_log = guessVisual.visualiseGuesses(CODE_LENGTH, guesses, results, guessNum);
+        System.out.println(guess_log);
         if (won) {
-            clear();
-            guess_log = guessVisual.visualiseGuesses(CODE_LENGTH, guesses, results, guessNum);
-            System.out.println(guess_log);
             System.out.println("You won!");
             System.out.println("Guesses used: " + guessNum);
         } else {
             System.out.println("You lose!");
+            System.out.println("The code was:");
+            for (String p: solution){
+                System.out.print(colours.colourMap().get(p));
+            }
         }
         inStream.close();
     }
